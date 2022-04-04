@@ -3,6 +3,7 @@ Bootstrap a TypeScript application with Vite dev server and Continuous Delivery
 
 ## Prerequisites
 
-**Node.js 16.14.0**
+**Node.js 16.14.2**
 
-The repository contains a `.node-version` file to set up the required Node.js version automatically with [nodenv](https://github.com/nodenv/nodenv).`
+The repository contains a `.node-version` file to set up the required Node.js version automatically with [nodenv](https://github.com/nodenv/nodenv).
+
