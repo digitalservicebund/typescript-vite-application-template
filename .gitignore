@@ -113,3 +113,6 @@ dist
 *.njsproj
 *.sln
 *.sw?
+
+# npm run serve
+dist
