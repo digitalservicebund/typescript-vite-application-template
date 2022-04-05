@@ -11,7 +11,8 @@
     "lint:check": "eslint --ext .js,.ts --ignore-path .gitignore .",
     "lint:fix": "npm run lint:check -- --fix",
     "format:check": "prettier --check .",
-    "format:fix": "prettier --write --ignore-unknown ."
+    "format:fix": "prettier --write --ignore-unknown .",
+    "audit:licences": "license-checker --production --excludePrivatePackages --onlyAllow 'MIT;ISC;BSD-3-Clause;Apache-2.0'"
   },
   "devDependencies": {
     "@testing-library/dom": "^8.13.0",
@@ -23,6 +24,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-prettier": "^4.0.0",
     "jest": "^27.5.1",
+    "license-checker": "^25.0.1",
     "prettier": "2.6.2",
     "ts-jest": "^27.1.4",
     "ts-node": "^10.7.0",
