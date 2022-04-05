@@ -1,0 +1,7 @@
+fileignoreconfig:
+  - filename: package-lock.json
+    checksum: 21be97f78c3056d625ce3d575f4baa2fc76e1a654547449e1547d84fa71481ef
+allowed_patterns:
+  - key
+scopeconfig:
+  - scope: node
