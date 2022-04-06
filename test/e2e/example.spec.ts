@@ -1,4 +1,4 @@
-import { test, expect, chromium, Browser, Page } from "@playwright/test"
+import { test, expect } from "@playwright/test"
 import { injectAxe, checkA11y } from "axe-playwright"
 
 test.describe("basic example test", () => {

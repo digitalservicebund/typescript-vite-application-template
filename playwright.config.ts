@@ -1,4 +1,5 @@
 import { devices, PlaywrightTestConfig } from "@playwright/test"
+import "axe-playwright"
 
 const config: PlaywrightTestConfig = {
   testDir: "./test/e2e",
