@@ -5,9 +5,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "test": "jest test",
-    "coverage": "jest test --coverage",
+    "preserve": "vite build",
     "serve": "vite preview",
+    "clean": "rm -rf dist/",
+    "test": "jest test",
+    "test:e2e": "playwright test",
+    "coverage": "jest test --coverage",
     "lint:check": "eslint --ext .js,.ts --ignore-path .gitignore .",
     "lint:fix": "npm run lint:check -- --fix",
     "format:check": "prettier --check .",
@@ -15,6 +18,8 @@
     "audit:licences": "license-checker --production --excludePrivatePackages --onlyAllow 'MIT;ISC;BSD-3-Clause;Apache-2.0'"
   },
   "devDependencies": {
+    "@playwright-testing-library/test": "^4.2.0",
+    "@playwright/test": "^1.20.2",
     "@testing-library/dom": "^8.13.0",
     "@testing-library/jest-dom": "^5.16.3",
     "@types/jest": "^27.4.1",

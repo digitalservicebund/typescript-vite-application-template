@@ -5,6 +5,8 @@ fileignoreconfig:
     checksum: 605890bfe8f8e3f0e8e43af0fb24ae6a676d21b6c98f6508bef98370fe885c1d
   - filename: .github/workflows/secrets-check.yml
     checksum: 9615146cd643726fc11ce02f5fec82ec04fcb5c1089842bc4e5fd86d70594763
+  - filename: README.md
+    checksum: 51ec69c17e0a9bdca0ff0e4c2d0eafe471463dfd30ac3236b642cb72f3bc54e0
 allowed_patterns:
   - key
 scopeconfig:
