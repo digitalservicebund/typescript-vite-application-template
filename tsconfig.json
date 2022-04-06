@@ -13,7 +13,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "types": ["@types/jest"]
+    "types": ["@types/jest", "axe-playwright"]
   },
   "include": ["src", "test/**/*.ts", "jest.setup.ts"]
 }
