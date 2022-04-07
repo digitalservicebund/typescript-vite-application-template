@@ -12,6 +12,7 @@ For E2E testing with [Playwright](https://playwright.dev/docs/intro) you will ne
 
 ```bash
 npx playwright install
+npx playwright install msedge
 ```
 
 For the provided Git hooks you will need:

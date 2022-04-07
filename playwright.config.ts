@@ -23,6 +23,12 @@ const config: PlaywrightTestConfig = {
       name: "webkit",
       use: { ...devices["Desktop Safari"] },
     },
+    {
+      name: "edge",
+      use: {
+        channel: "msedge",
+      },
+    },
   ],
   webServer: {
     command: "npm run serve",
