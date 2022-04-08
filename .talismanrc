@@ -2,7 +2,7 @@ fileignoreconfig:
   - filename: package-lock.json
     checksum: 21be97f78c3056d625ce3d575f4baa2fc76e1a654547449e1547d84fa71481ef
   - filename: .github/workflows/pipeline.yml
-    checksum: 605890bfe8f8e3f0e8e43af0fb24ae6a676d21b6c98f6508bef98370fe885c1d
+    checksum: d12bf68acd368edef58e946120bfee404a160dfdd38bcfa5ad4ac4310e388b19
   - filename: .github/workflows/secrets-check.yml
     checksum: 9615146cd643726fc11ce02f5fec82ec04fcb5c1089842bc4e5fd86d70594763
   - filename: README.md
