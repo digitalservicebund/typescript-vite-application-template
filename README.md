@@ -8,7 +8,7 @@ Bootstrap a TypeScript application with Vite dev server and Continuous Delivery
 
 The repository contains a `.node-version` file to set up the required Node.js version automatically with [nodenv](https://github.com/nodenv/nodenv).
 
-For E2E testing with [Playwright](https://playwright.dev/docs/intro) you will need to install the supported browsers:
+For E2E and a11y testing with [Playwright](https://playwright.dev/docs/intro) you will need to install the supported browsers:
 
 ```bash
 npx playwright install
@@ -47,6 +47,7 @@ The application has
 
 - unit tests (using [Jest](https://jestjs.io/docs/getting-started))
 - end-to-end tests (using [Playwright](https://playwright.dev/docs/intro))
+- accessibility tests (using [Axe](https://github.com/abhinaba-ghosh/axe-playwright#readme) and [Playwright](https://playwright.dev/docs/intro))
 
 **To run the unit tests:**
 
@@ -70,6 +71,12 @@ npm run coverage
 
 ```bash
 npm run test:e2e
+```
+
+**To run the a11y tests:**
+
+```bash
+npm run test:a11y
 ```
 
 ### Style (linting & formatting)
