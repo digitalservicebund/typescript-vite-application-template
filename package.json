@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@playwright-testing-library/test": "^4.2.0",
-    "@playwright/test": "^1.20.2",
+    "@playwright/test": "^1.21.0",
     "@testing-library/dom": "^8.13.0",
     "@testing-library/jest-dom": "^5.16.3",
     "@types/jest": "^27.4.1",
