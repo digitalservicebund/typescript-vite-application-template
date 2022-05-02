@@ -42,7 +42,7 @@ _setup_repo() {
 }
 
 _setup_git_hooks() {
-  _user "Do you want to install the Git hooks ? (y/n) "
+  _user "Do you want to install the Git hooks? (y/n) "
   read -r answer
   if [ "$answer" = "y" ]; then
     if ! command -v lefthook > /dev/null 2>&1; then
