@@ -24,7 +24,7 @@ jobs:
           TRIVY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
         with:
           scan-type: "fs"
-          skip-files: "node_modules/combined-stream/yarn.lock,node_modules/uri-js/yarn.lock"
+          skip-dirs: "node_modules" # See https://github.com/aquasecurity/trivy/issues/1283
           format: "sarif"
           output: "trivy-results.sarif"
           severity: "CRITICAL,HIGH"
