@@ -36,7 +36,7 @@ jobs:
         env:
           WAIT_ON_TIMEOUT: 20000 # 20 seconds... by default start-server-and-test will wait 5 minutes, way too long for feedback!
         run: npm run test:e2e
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         if: ${{ failure() }}
         with:
           name: playwright-test-results
