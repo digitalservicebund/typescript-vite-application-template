@@ -41,6 +41,24 @@ jobs:
           path: test-results
       - name: Run a11y tests
         run: npm run test:a11y
+      - name: Run Trivy vulnerability scanner
+        # Third-party action, pin to commit SHA!
+        # See https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions
+        uses: aquasecurity/trivy-action@a7a829a4345428ddd92ca57b18257440f6a18c90 # => 0.2.2
+        env:
+          TRIVY_USERNAME: ${{ github.actor }}
+          TRIVY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          scan-type: "fs"
+          format: "sarif"
+          output: "trivy-results.sarif"
+          severity: "CRITICAL,HIGH"
+          exit-code: "1" # Fail the build!
+      - name: Upload Trivy scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@v2
+        if: always() # Bypass non-zero exit code..
+        with:
+          sarif_file: "trivy-results.sarif"
       - name: Send status to Slack
         # Third-party action, pin to commit SHA!
         # See https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions
