@@ -23,6 +23,24 @@ _user() {
   printf "\033[0;33m%s\033[0m" "$1"
 }
 
+_find_placeholder_strings() {
+  grep -rlZ 'typescript-vite-application-template' --exclude-dir=.git --exclude-dir=node_modules --exclude=run.sh .
+}
+
+_setup_repo() {
+  if _find_placeholder_strings > /dev/null; then
+    defaultname="$(basename "$(git rev-parse --show-toplevel)")"
+    _user "Name of the repository? ($defaultname) "
+    read -r name
+    newname=$name
+    if [ -z "$newname" ]; then
+      newname=$defaultname
+    fi
+    _find_placeholder_strings | xargs sed -i '' 's/typescript-vite-application-template/'"$newname"'/g'
+    _info "Renamed, please commit the changes!"
+  fi
+}
+
 _setup_git_hooks() {
   _user "Do you want to install the Git hooks ? (y/n) "
   read -r answer
@@ -41,6 +59,7 @@ _setup_git_hooks() {
 }
 
 _init() {
+  _setup_repo
   _setup_git_hooks
 }
 
