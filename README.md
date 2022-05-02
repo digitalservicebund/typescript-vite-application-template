@@ -1,6 +1,7 @@
 # typescript-vite-application-template
 
 [![Pipeline](https://github.com/digitalservice4germany/typescript-vite-application-template/actions/workflows/pipeline.yml/badge.svg)](https://github.com/digitalservice4germany/typescript-vite-application-template/actions/workflows/pipeline.yml)
+[![Scan](https://github.com/digitalservice4germany/typescript-vite-application-template/actions/workflows/scan.yml/badge.svg)](https://github.com/digitalservice4germany/typescript-vite-application-template/actions/workflows/scan.yml)
 [![Secrets Check](https://github.com/digitalservice4germany/typescript-vite-application-template/actions/workflows/secrets-check.yml/badge.svg)](https://github.com/digitalservice4germany/typescript-vite-application-template/actions/workflows/secrets-check.yml)
 
 Bootstrap a TypeScript application with Vite dev server and Continuous Delivery
