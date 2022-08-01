@@ -12,7 +12,11 @@ pre-commit:
       tags: style
       run: npm run format:check
 pre-push:
+  parallel: true
   commands:
+    licenses-audit:
+      tags: licenses audit
+      run: npm run audit:licences
     secrets-audit:
       # NOTE: there's one caveat with this hook! When pushing, it will only correctly scan the range of
       # outgoing commits when pushing to a matching branch on the remote (e.g. `git push`) - pushing to a
@@ -36,5 +40,5 @@ pre-push:
       # done
       #
       # exit 0
-      tags: security
+      tags: security audit
       run: currentbranch=$(git rev-parse --abbrev-ref HEAD); echo "refs/heads/$currentbranch HEAD refs/heads/$currentbranch $(git log -1 origin/$currentbranch --format='%H')" | talisman --githook pre-push
