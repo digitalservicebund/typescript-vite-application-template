@@ -7,6 +7,6 @@ describe("App", () => {
   `
 
   it("shows Hello ds", () => {
-    expect(getByText(exampleDiv, "Hello DigitalService")).toBeTruthy()
+    expect(getByText(exampleDiv, "Hello DigitalService")).toBeInTheDocument()
   })
 })
