@@ -1,4 +1,4 @@
-# typescript-vite-application-template
+# TypeScript + Vite Application Template
 
 [![Pipeline](https://github.com/digitalservicebund/typescript-vite-application-template/actions/workflows/pipeline.yml/badge.svg)](https://github.com/digitalservicebund/typescript-vite-application-template/actions/workflows/pipeline.yml)
 [![Scan](https://github.com/digitalservicebund/typescript-vite-application-template/actions/workflows/scan.yml/badge.svg)](https://github.com/digitalservicebund/typescript-vite-application-template/actions/workflows/scan.yml)
