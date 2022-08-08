@@ -1,6 +1,6 @@
 import "./style.css"
 
-const app = document.querySelector<HTMLDivElement>("#app")!
+const app = document.querySelector<HTMLElement>("#app")!
 
 app.innerHTML = `
   <h1>Hello DigitalService!</h1>
