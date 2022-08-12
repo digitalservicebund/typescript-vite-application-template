@@ -39,7 +39,7 @@
     "eslint-plugin-testing-library": "^5.6.0",
     "jest": "^27.5.1",
     "license-checker": "^25.0.1",
-    "playwright": "^1.24.0",
+    "playwright": "^1.25.0",
     "prettier": "2.7.0",
     "prettier-plugin-sh": "^0.12.4",
     "ts-jest": "^27.1.4",
