@@ -2,10 +2,10 @@ fileignoreconfig:
   - filename: "*README.md"
     ignore_detectors: [filecontent]
   - filename: .github/workflows/pipeline.yml
-    checksum: 1d3e3cfe3a654c7c4ea4a9e5e386aaab10a7600d5b8b5306a6f70312164c3459
+    checksum: 8bf1310f0ab7b98c0bc833a1800c1d697362107a96c8e378636efa45076f1d08
   - filename: .github/workflows/secrets-check.yml
     checksum: 44b8d4b67d28c9f30eb4f4ae79427592ebbeeded128f7f7ef7d1c18bf7f0de94
   - filename: .github/workflows/scan.yml
-    checksum: 2a12bf1daed9ef892c529473c200b24d5104e8d2663005569ba5b2d5fceda51a
+    checksum: 8cb63d5c555a3a45c601eb023d2c983f06d6ea7a92e4f03ce275a0cc381fb454
 scopeconfig:
   - scope: node
