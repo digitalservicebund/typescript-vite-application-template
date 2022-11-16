@@ -29,8 +29,18 @@ module.exports = {
     // Avoid linting JavaScript config files with TypeScript rules...
     {
       files: ["**/*.ts"],
-      extends: ["plugin:import/recommended", "plugin:import/typescript"],
+      excludedFiles: "{a11y,e2e}/**/*.ts",
+      extends: [
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+      ],
       rules: { ...moduleImportRules },
+      parserOptions: {
+        tsconfigRootDir: __dirname,
+        project: ["./tsconfig.json"],
+      },
     },
     // ...and avoid linting TypeScript files with ES rules for JavaScript config files!
     {
