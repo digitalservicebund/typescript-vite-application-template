@@ -28,9 +28,7 @@ const config: PlaywrightTestConfig = {
     },
     {
       name: "edge",
-      use: {
-        channel: "msedge",
-      },
+      use: { channel: "msedge" },
     },
   ],
   webServer: {
