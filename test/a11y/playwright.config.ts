@@ -1,10 +1,6 @@
 import { devices, PlaywrightTestConfig } from "@playwright/test"
 
-// Use a different port (from the one used with E2E tests) to workaround problem in CI/GitHub Actions,
-// starting to occur with playwright/test 1.28.0:
-// Error: http://localhost:4173 is already used ...
-// See https://github.com/digitalservicebund/typescript-vite-application-template/actions/runs/3486985178/jobs/5834089375
-const port = 4174
+const port = process.env.VITE_PORT || 4173 // Vite's default port when running `vite preview`
 
 const config: PlaywrightTestConfig = {
   testDir: ".",
