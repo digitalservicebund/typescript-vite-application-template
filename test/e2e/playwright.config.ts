@@ -1,5 +1,8 @@
 import { devices, PlaywrightTestConfig } from "@playwright/test"
 
+// Vite's default port
+const port = 4173
+
 const config: PlaywrightTestConfig = {
   testDir: ".",
   timeout: 10000,
@@ -7,7 +10,7 @@ const config: PlaywrightTestConfig = {
   use: {
     viewport: { width: 1280, height: 720 },
     acceptDownloads: true,
-    baseURL: "http://localhost:4173",
+    baseURL: `http://localhost:${port}`,
     screenshot: "only-on-failure",
   },
   projects: [
@@ -32,7 +35,7 @@ const config: PlaywrightTestConfig = {
   ],
   webServer: {
     command: "npm run serve",
-    port: 4173,
+    port: port,
     timeout: parseInt(process.env.WAIT_ON_TIMEOUT) || 20 * 1000,
   },
 }
