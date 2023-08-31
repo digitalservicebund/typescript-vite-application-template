@@ -12,11 +12,7 @@ const config: Config.InitialOptions = {
     "<rootDir>/test/a11y",
   ],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
-  collectCoverageFrom: [
-    "src/**/*.ts",
-    "!src/main.ts", // No need to cover bootstrap file
-    "!**/*.d.ts",
-  ],
+  collectCoverageFrom: ["src/**", "!**/*.d.ts"],
 }
 
 export default config
