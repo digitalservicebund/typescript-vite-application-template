@@ -116,3 +116,6 @@ dist
 
 # npm run serve
 dist
+
+talisman_report
+lefthook-local.yml
