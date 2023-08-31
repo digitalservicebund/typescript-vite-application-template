@@ -23,11 +23,23 @@ npx playwright install msedge
 
 ### Git Hooks
 
-For the provided Git hooks you will need to install [lefthook](https://github.com/evilmartians/lefthook) (git hook manager) and [talisman](https://thoughtworks.github.io/talisman/docs) (secrets scanner):
+For the provided Git hooks you will need to install [lefthook](https://github.com/evilmartians/lefthook/blob/master/docs/full_guide.md) (git hook manager) and [talisman](https://thoughtworks.github.io/talisman/docs) (secrets scanner):
 
 ```bash
 brew install lefthook talisman
+./run.sh init
 ```
+
+The following hooks are specified in the `lefthook.yml`:
+
+- `commitlint` - write [conventional commit messages](https://chris.beams.io/posts/git-commit/)
+- `lint` - avoid commiting code violating linting rules
+- `format` - avoid commiting wrongly formatted code
+
+Before pushing, the following checks are additionally ran:
+
+- `licenses-audit` - uses `license-checker` to verify depency licenses
+- `secrets-audit` - avoid accidental pushes of [secrets and sensitive information](https://thoughtworks.github.io/talisman/)
 
 ### security.txt
 
@@ -40,23 +52,9 @@ Canonical: https://<<PROJECT_URL>>/.well-known/security.txt
 
 ## Development
 
-### Getting started
-
-**Optional - install [Git hooks](#git-hooks):**
-
-```bash
-./run.sh init
-```
-
 ### Dev server
 
-The project uses [Vite](https://vitejs.dev/guide/) to provide a fast bundler-less [dev server](http://localhost:3000/).
-
-**Start server**:
-
-```bash
-npm run dev
-```
+The project uses [Vite](https://vitejs.dev/guide/) to provide a bundler-less dev server, available via `npm run dev`.
 
 ### Testing
 
@@ -66,69 +64,24 @@ The application has
 - end-to-end tests (using [Playwright](https://playwright.dev/docs/intro))
 - accessibility tests (using [Axe](https://github.com/abhinaba-ghosh/axe-playwright#readme) and [Playwright](https://playwright.dev/docs/intro))
 
-**To run the unit tests:**
+**Test commands**
 
-```bash
-npm test
-```
+- Run unit tests: `npm test`
+- Run unit tests with watcher: `npm test -- --watch`
+- Gather coverage: `npm run coverage`
+- Run E2E tests: `npm run test:e2e`
+- Run a11y tests: `npm run test:a11y`
 
-**With watcher:**
+### Code quality checks (linting & formatting)
 
-```bash
-npm test -- --watch
-```
+The project uses [ESLint](https://eslint.org/docs/latest/) for linting and [Prettier](https://prettier.io/docs/en/). for formatting.
 
-**Gather coverage**:
+**Commands**
 
-```bash
-npm run coverage
-```
-
-**To run the E2E tests:**
-
-```bash
-npm run test:e2e
-```
-
-**To run the a11y tests:**
-
-```bash
-npm run test:a11y
-```
-
-### Style (linting & formatting)
-
-Linting is done via [ESLint](https://eslint.org/docs/user-guide/getting-started); consistent formatting for a variety of source code files is being enforced using [Prettier](https://prettier.io/docs/en/index.html). ESLint and Prettier work in conjunction.
-
-**Check style:**
-
-```bash
-npm run style:check
-```
-
-**Autofix issues:**
-
-```bash
-npm run style:fix
-```
-
-(Some problems might not autofix.)
-
-### Git hooks
-
-The repo contains a [Lefthook](https://github.com/evilmartians/lefthook/blob/master/docs/full_guide.md) configuration, providing a Git hooks setup out of the box.
-
-**To install these hooks, run:**
-
-```bash
-./run.sh init
-```
-
-The hooks are supposed to help to:
-
-- commit properly formatted and linted source code only (and not break the build otherwise)
-- write [conventional commit messages](https://chris.beams.io/posts/git-commit/)
-- not accidentally push [secrets and sensitive information](https://thoughtworks.github.io/talisman/)
+- Check style: `npm run style:check`
+- Autofix style issues: `npm run style:fix`
+- Check lint: `npm run lint:check`
+- Autofix lint issues: `npm run lint:fix`
 
 ## Architecture Decision Records
 
