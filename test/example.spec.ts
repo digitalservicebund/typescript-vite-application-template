@@ -6,7 +6,7 @@ describe("App", () => {
       <h1>TypeScript + Vite Application Template<h1>
     `
     expect(
-      screen.getByText("TypeScript + Vite Application Template")
+      screen.getByText("TypeScript + Vite Application Template"),
     ).toBeVisible()
   })
 })
