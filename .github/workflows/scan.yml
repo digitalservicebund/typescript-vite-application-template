@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: validate github workflow files to have pinned versions
-        uses: digitalservicebund/github-actions/github-actions-linter@33695c875c198153e136ed0b99e06962e7fee0af
+        uses: digitalservicebund/github-actions/github-actions-linter@5009471245d84903ea1af84104eb1908f8e2b2a2
       - name: Run Trivy vulnerability scanner
         # Third-party action, pin to commit SHA!
         # See https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions
