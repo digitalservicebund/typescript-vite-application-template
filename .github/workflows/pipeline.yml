@@ -8,6 +8,9 @@ on:
   # Allow to run this workflow manually
   workflow_dispatch:
 
+env:
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -74,6 +77,16 @@ jobs:
           # Error: http://localhost:4173 is already used ...
           # See https://github.com/digitalservicebund/typescript-vite-application-template/actions/runs/3486985178/jobs/5834089375
           VITE_PORT: 4183
+
+      - name: Build an image from Dockerfile
+        run: |
+          docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} . --build-arg COMMIT_SHA=${{ github.sha }}
+
+      - name: Create SBOM
+        uses: digitalservicebund/github-actions/create-sbom@40022b2843c5d9f9efba2c92d9421e19d3a1a3de
+        with:
+          repository: ${{ env.GITHUB_REGISTRY }}/${{ github.repository }}
+          image_tag: ${{ env.IMAGE_NAME }}:${{ github.sha }
 
       - name: Send status to Slack
         # Third-party action, pin to commit SHA!
