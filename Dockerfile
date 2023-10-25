@@ -7,7 +7,7 @@ ENV APP_VERSION=$COMMIT_SHA
 WORKDIR /src
 # Required files are whitelisted in dockerignore
 COPY . ./
-RUN npm ci && npm run build && npm prune --production
+RUN npm ci --ignore-scripts && npm run build && npm prune --production
 
 FROM node:18.18.2-alpine3.18
 
