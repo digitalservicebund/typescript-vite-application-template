@@ -158,7 +158,7 @@ jobs:
           exit-code: "1" # Fail the build!
 
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@9885f86fab4879632b7e44514f19148225dfbdcd # == v2
+        uses: github/codeql-action/upload-sarif@eb14aeb61d80eb999887486ac17a507b970d02f0 # == v2
         if: always() # Bypass non-zero exit code..
         with:
           sarif_file: "trivy-results.sarif"
