@@ -41,7 +41,7 @@
     "jest-environment-jsdom": "^29.7.0",
     "license-checker": "^25.0.1",
     "playwright": "^1.39.0",
-    "prettier": "3.0.3",
+    "prettier": "3.2.2",
     "prettier-plugin-sh": "^0.13.1",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
