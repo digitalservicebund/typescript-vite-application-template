@@ -10,7 +10,7 @@ Bootstrap a TypeScript application with Vite dev server and Continuous Delivery
 
 ### Node.js
 
-We aim to use the current active [LTS version of nodejs](https://nodejs.dev/en/about/releases/), which is V18 at the time of writing. There is a `.node-version` file to simplify setup using [nodenv](https://github.com/nodenv/nodenv).
+We aim to use the current active [LTS version of nodejs](https://nodejs.dev/en/about/releases/), which is v20 at the time of writing. There is a `.node-version` file to simplify setup using [nodenv](https://github.com/nodenv/nodenv).
 
 ### Testing
 
