@@ -13,6 +13,6 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
-    "types": ["@types/jest", "axe-playwright", "node"]
-  }
+    "types": ["@types/jest", "axe-playwright", "node"],
+  },
 }
