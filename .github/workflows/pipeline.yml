@@ -18,9 +18,6 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: validate github workflow files to have pinned versions
-        uses: digitalservicebund/github-actions/github-actions-linter@5009471245d84903ea1af84104eb1908f8e2b2a2
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -83,7 +80,7 @@ jobs:
           docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} . --build-arg COMMIT_SHA=${{ github.sha }}
 
       - name: Create SBOM
-        uses: digitalservicebund/github-actions/create-sbom@40022b2843c5d9f9efba2c92d9421e19d3a1a3de
+        uses: digitalservicebund/github-actions/create-sbom@c6b78c632c4b017802d3e3ce9706a43b9380f804
         with:
           repository: digitalservicebund
           image_tag: typescript-vite-application-template:${{ github.sha }}
@@ -99,9 +96,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: validate github workflow files to have pinned versions
-        uses: digitalservicebund/github-actions/github-actions-linter@5009471245d84903ea1af84104eb1908f8e2b2a2
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -140,12 +134,10 @@ jobs:
       security-events: write
     steps:
       - name: validate github workflow files to have pinned versions
-        uses: digitalservicebund/github-actions/github-actions-linter@5009471245d84903ea1af84104eb1908f8e2b2a2
+        uses: digitalservicebund/github-actions/github-actions-linter@007a33473780385bb122cfefa7edbb5621e094f7 # v0.1.10
 
       - name: Run Trivy vulnerability scanner
-        # Third-party action, pin to commit SHA!
-        # See https://docs.github.com/en/actions/security-guides/security-hardening-for-github-actions
-        uses: aquasecurity/trivy-action@d43c1f16c00cfd3978dde6c07f4bbcf9eb6993ca
+        uses: aquasecurity/trivy-action@d43c1f16c00cfd3978dde6c07f4bbcf9eb6993ca # v0.16.1
         env:
           TRIVY_USERNAME: ${{ github.actor }}
           TRIVY_PASSWORD: ${{ secrets.GITHUB_TOKEN }}
@@ -158,7 +150,7 @@ jobs:
           exit-code: "1" # Fail the build!
 
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@e5f05b81d5b6ff8cfa111c80c22c5fd02a384118 # == v3.23.0
+        uses: github/codeql-action/upload-sarif@e5f05b81d5b6ff8cfa111c80c22c5fd02a384118 # v3.23.0
         if: always() # Bypass non-zero exit code..
         with:
           sarif_file: "trivy-results.sarif"
