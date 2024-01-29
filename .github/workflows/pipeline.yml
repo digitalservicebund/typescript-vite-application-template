@@ -82,8 +82,7 @@ jobs:
       - name: Create SBOM
         uses: digitalservicebund/github-actions/create-sbom@c6b78c632c4b017802d3e3ce9706a43b9380f804
         with:
-          repository: digitalservicebund
-          image_tag: typescript-vite-application-template:${{ github.sha }}
+          image_name: ${{ env.IMAGE_NAME }}:${{ github.sha }}
 
       - name: Send status to Slack
         uses: digitalservicebund/notify-on-failure-gha@15dd05b628141b7bac0ad26e08c1935cb3ba6bc8 # v1.4.0

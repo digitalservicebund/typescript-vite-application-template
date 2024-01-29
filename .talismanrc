@@ -6,7 +6,7 @@ fileignoreconfig:
   - filename: .github/workflows/scan.yml
     checksum: 643a84a8bc58e3e29f0cceba195f590f11db6c4f5a604302ddd46a838050ac36
   - filename: .github/workflows/pipeline.yml
-    checksum: 6cedfa5e27bf0dbc5dab27cb5b7a2d321e97937396ead48aa1676a40f2ec31ee
+    checksum: 6acd4784d7bf5a1846ce18fd12dfe94917fcac9d28762049524c4412e9acf709
 scopeconfig:
   - scope: node
 allowed_patterns:
