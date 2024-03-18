@@ -14,6 +14,9 @@ env:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -78,9 +81,19 @@ jobs:
       - name: Build an image from Dockerfile
         run: |
           docker build -t ${{ env.IMAGE_NAME }}:${{ github.sha }} . --build-arg COMMIT_SHA=${{ github.sha }}
-
+      - name: Login to container registry
+        uses: docker/login-action@e92390c5fb421da1463c202d546fed0ec5c39f20 # v3.1.0
+        with:
+          registry: "ghcr.io"
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Push image
+        run: |
+          docker tag ${{ github.repository }}:${{ github.sha }} ghcr.io/${{ github.repository }}
+          docker tag ${{ github.repository }}:${{ github.sha }} ghcr.io/${{ github.repository }}:${{ github.sha }}
+          docker push --all-tags ghcr.io/${{ github.repository }}
       - name: Create SBOM
-        uses: digitalservicebund/github-actions/create-sbom@c6b78c632c4b017802d3e3ce9706a43b9380f804
+        uses: digitalservicebund/create-sbom@095884614dac5ea922dfcb09cce2e22f3d6391a3 # v1.1.0
         with:
           image_name: ${{ env.IMAGE_NAME }}:${{ github.sha }}
 
@@ -133,7 +146,7 @@ jobs:
       security-events: write
     steps:
       - name: validate github workflow files to have pinned versions
-        uses: digitalservicebund/github-actions/github-actions-linter@c6b78c632c4b017802d3e3ce9706a43b9380f804 # v0.1.10
+        uses: digitalservicebund/github-actions-linter@dccac3ada437947aada4bc901daff08ceb87c3f1 # v0.1.11
 
       - name: Run Trivy vulnerability scanner
         uses: aquasecurity/trivy-action@062f2592684a31eb3aa050cc61e7ca1451cecd3d # v0.18.0
