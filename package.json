@@ -26,9 +26,9 @@
     "@playwright-testing-library/test": "^4.5.0",
     "@playwright/test": "^1.43.1",
     "@testing-library/dom": "^10.1.0",
-    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/jest-dom": "^6.4.3",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.12.7",
+    "@types/node": "^20.12.8",
     "@typescript-eslint/eslint-plugin": "^7.8.0",
     "@typescript-eslint/parser": "^7.8.0",
     "axe-playwright": "^2.0.1",
@@ -47,7 +47,7 @@
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
-    "vite": "^5.2.10"
+    "vite": "^5.2.11"
   },
   "engines": {
     "node": ">=20"
