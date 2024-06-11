@@ -26,9 +26,9 @@
     "@playwright-testing-library/test": "^4.5.0",
     "@playwright/test": "^1.44.1",
     "@testing-library/dom": "^10.1.0",
-    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/jest-dom": "^6.4.6",
     "@types/jest": "^29.5.12",
-    "@types/node": "^20.14.0",
+    "@types/node": "^20.14.2",
     "@typescript-eslint/eslint-plugin": "^7.13.0",
     "@typescript-eslint/parser": "^7.13.0",
     "axe-playwright": "^2.0.1",
@@ -42,12 +42,12 @@
     "jest-environment-jsdom": "^29.7.0",
     "license-checker": "^25.0.1",
     "playwright": "^1.44.1",
-    "prettier": "3.3.0",
+    "prettier": "3.3.2",
     "prettier-plugin-sh": "^0.14.0",
     "ts-jest": "^29.1.4",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.5",
-    "vite": "^5.2.12"
+    "vite": "^5.2.13"
   },
   "engines": {
     "node": ">=20"
