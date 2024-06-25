@@ -4,9 +4,9 @@ fileignoreconfig:
   - filename: .github/workflows/secrets-check.yml
     checksum: 20e55c98a60e39438b1843b02f289c5d729a781e95bdebf025d6e8768a1768d4
   - filename: .github/workflows/scan.yml
-    checksum: dbd2a3559e83c7afb3f358428fc0c5f10ad7f84fef5e0cc9c98a2d846f90e660
+    checksum: 5071fce813691efc0bf0458800260f28c3451b60065304e0a7104b9c65c42c46
   - filename: .github/workflows/pipeline.yml
-    checksum: 3afa1bc8217200b65738d1d5fcc2255b8ce721ac5648a609eb2e00a0bd5e2914
+    checksum: 3c5f3b76c16f8378c2f522e949696893662add2d86f05045abeeee18b8379a85
 scopeconfig:
   - scope: node
 allowed_patterns:
