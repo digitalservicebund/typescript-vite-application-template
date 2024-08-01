@@ -32,7 +32,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "axe-playwright": "^2.0.1",
-    "eslint": "^8.57.0",
+    "eslint": "^9.8.0",
     "eslint-plugin-import": "^2.29.1",
     "eslint-plugin-jest-dom": "^5.4.0",
     "eslint-plugin-playwright": "^1.6.2",
