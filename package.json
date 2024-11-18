@@ -34,7 +34,7 @@
     "axe-playwright": "^2.0.3",
     "eslint": "^8.57.0",
     "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jest-dom": "^5.4.0",
+    "eslint-plugin-jest-dom": "^5.5.0",
     "eslint-plugin-playwright": "^2.0.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-testing-library": "^6.4.0",
