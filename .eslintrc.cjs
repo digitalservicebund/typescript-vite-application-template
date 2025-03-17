@@ -28,8 +28,7 @@ module.exports = {
   overrides: [
     // Avoid linting JavaScript config files with TypeScript rules...
     {
-      files: ["**/*.ts"],
-      excludedFiles: "{a11y,e2e}/**/*.ts",
+      files: ["src/**/*.ts"],
       extends: [
         "plugin:import/recommended",
         "plugin:import/typescript",
@@ -44,7 +43,7 @@ module.exports = {
     },
     // ...and avoid linting TypeScript files with ES rules for JavaScript config files!
     {
-      files: ["**/*.js"],
+      files: ["**/*.js", "**/*.cjs"],
       extends: ["eslint:recommended", "plugin:import/recommended"],
       rules: { ...moduleImportRules },
     },
