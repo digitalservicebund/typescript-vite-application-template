@@ -43,7 +43,7 @@
     "license-checker-rseidelsohn": "^4.4.2",
     "playwright": "^1.51.0",
     "prettier": "3.5.3",
-    "prettier-plugin-sh": "^0.15.0",
+    "prettier-plugin-sh": "^0.16.0",
     "ts-jest": "^29.3.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
