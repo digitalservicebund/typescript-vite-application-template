@@ -63,7 +63,7 @@ jobs:
       - name: Run E2E tests
         run: npm run test:e2e
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v6
         if: ${{ failure() }}
         with:
           name: playwright-test-results
