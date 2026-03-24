@@ -1,3 +1,8 @@
+> [!WARNING]
+> **THIS REPO IS DEPRECATED**
+> You probably want to scaffold an [official vite project](https://vite.dev/guide/#scaffolding-your-first-vite-project) or look into [community-led templates](https://github.com/vitejs/awesome-vite#templates).
+> For adding DS-specific license, code-of-conduct or security templates, have a look at our [opensource-template repo](https://github.com/digitalservicebund/opensource-template).
+
 # TypeScript + Vite Application Template
 
 [![Pipeline](https://github.com/digitalservicebund/typescript-vite-application-template/actions/workflows/pipeline.yml/badge.svg)](https://github.com/digitalservicebund/typescript-vite-application-template/actions/workflows/pipeline.yml)
